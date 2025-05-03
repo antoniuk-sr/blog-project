@@ -1,0 +1,51 @@
+<div class="flex w-full flex-col mt-[173px]">
+  <div class="flex flex-col items-center justify-center gap-[15px]">
+    <span
+      class="text-[var(--white)] text-[42px] font-bold uppercase leading-[55px] tracking-[0px]"
+      >Наши проекты — цифровые решения для реальных задач</span
+    >
+    <span
+      class="text-[var(--white)] text-[18px] font-normal leading-[32px] tracking-[0px]"
+      >От идеи до реализации: полный цикл разработки с фокусом на
+      результат</span
+    >
+  </div>
+  <div class="flex flex-row justify-center items-baseline gap-[40px] mt-[55px]">
+    <div class="flex flex-col gap-[40px]">
+      <app-portfolio-card
+        *ngFor="let item of leftCards"
+        [header]="item.header"
+        [subheader]="item.subheader"
+        [image]="item.image"
+      ></app-portfolio-card>
+    </div>
+    <div
+      class="flex flex-col items-center bg-[var(--blue)] h-full w-[470px] rounded-[40px] p-[44px] gap-[22px] overflow-hidden"
+    >
+      <div>
+        <span
+          class="text-[var(--white)] font-bold uppercase leading-[26px] tracking-[1px]"
+          >{{ mainImage?.header }}</span
+        >
+      </div>
+      <div>
+        <span
+          class="text-[var(--white)] font-normal leading-[26px] tracking-[0px]"
+          >{{ mainImage?.subheader }}</span
+        >
+      </div>
+      <img
+        class="max-w-[470px] max-h-[360px] mb-[-20%] rounded-[40px]"
+        [src]="mainImage?.image?.formats?.large?.url"
+      />
+    </div>
+    <div class="flex flex-col gap-[40px]">
+      <app-portfolio-card
+        *ngFor="let item of rightCards"
+        [header]="item.header"
+        [subheader]="item.subheader"
+        [image]="item.image"
+      ></app-portfolio-card>
+    </div>
+  </div>
+</div>

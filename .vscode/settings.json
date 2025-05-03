@@ -1,0 +1,88 @@
+{
+    // Автоматическое форматирование при сохранении
+    "editor.formatOnSave": true,
+
+    // Указывает, что форматирование должно выполняться только для текущего файла
+    "editor.formatOnSaveMode": "file",
+
+    // Устанавливает Prettier как инструмент для форматирования
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // Включает автоформатирование для JavaScript, TypeScript, JSX, TSX
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Включает автоформатирование для CSS, SCSS, Less
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[less]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Включает автоформатирование для JSON
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Включает автоформатирование для HTML
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Включает автоформатирование для Markdown
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Настройки для Prettier
+    "prettier.singleQuote": true, // Использовать одинарные кавычки
+    "prettier.trailingComma": "es5", // Добавлять запятые в конце объектов и массивов
+    "prettier.semi": true, // Добавлять точку с запятой в конце выражений
+    "prettier.printWidth": 80, // Максимальная длина строки
+    "prettier.tabWidth": 2, // Ширина отступа
+    "prettier.useTabs": false, // Использовать пробелы вместо табов
+
+    // Включает автоформатирование для других языков (по желанию)
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+
+    // Дополнительные настройки
+    "files.autoSave": "onFocusChange", // Автосохранение при потере фокуса
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    }
+}

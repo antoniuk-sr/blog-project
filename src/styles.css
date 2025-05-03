@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+:root {
+  --blue: #0328ee;
+  --blue2: #010725;
+  --blue3: #010d50;
+  --blue4: #031fb4;
+  --white: #ffffff;
+  --gray: rgba(255, 255, 255, 0.1);
+  --gray2: rgba(255, 255, 255, 0.2);
+  --gray3: rgba(255, 255, 255, 0.3);
+  --black: #000000;
+}
+
+body {
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: normal;
+  line-height: 32px;
+  width: 100%;
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  background-color: var(--blue2);
+}
+
+/* DM Sans - Regular */
+@font-face {
+  font-family: "DM Sans";
+  src: url(./assets/fonts/DMSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Оптимизация загрузки шрифтов */
+}
+
+/* DM Sans - Italic */
+@font-face {
+  font-family: "DM Sans";
+  src: url(./assets/fonts/DMSans-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* DM Sans - Medium */
+@font-face {
+  font-family: "DM Sans";
+  src: url(./assets/fonts/DMSans-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* DM Sans - Bold */
+@font-face {
+  font-family: "DM Sans";
+  src: url(./assets/fonts/DMSans-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

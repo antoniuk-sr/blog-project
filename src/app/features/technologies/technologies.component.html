@@ -1,0 +1,29 @@
+<div
+  class="w-full flex flex-col justify-center items-center mt-[173px] gap-[20px]"
+>
+  <h4
+    class="text-[18px] leading-[32px] tracking-[0px] font-normal text-[var(--white)]"
+  >
+    Технологии, которые мы используем в нашей команде
+  </h4>
+  <div class="flex justify-around items-center w-full">
+    <div
+      class="flex items-center gap-[10px]"
+      *ngFor="let technology of technologies"
+    >
+      <img
+        class="h-[40px]"
+        [src]="
+          technology.image.formats.small.url ||
+          technology.image.formats.thumbnail.url
+        "
+        alt="Technology"
+      />
+      <h5
+        class="uppercase text-[24px] leading-[32px] tracking-[0px] font-bold text-[var(--white)]"
+      >
+        {{ technology.name }}
+      </h5>
+    </div>
+  </div>
+</div>

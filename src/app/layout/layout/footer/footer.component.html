@@ -1,0 +1,79 @@
+<footer
+  class="container flex flex-col justify-between h-[684px] mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--blue3)] py-[33px] text-[var(--white)]"
+>
+  <div class="flex justify-between items-center">
+    <div class="flex gap-[10px] p-[24px]">
+      <img class="max-w-[154px] max-h-[30px]" src="/img/logo.svg" alt="" />
+      <span class="text-[var(--white)] text-[18px] font-normal">
+        Finances&Signals
+      </span>
+    </div>
+    <div class="flex justify-around gap-[12px]">
+      <button>
+        <img src="/img/social/insta.svg" alt="" />
+      </button>
+
+      <button>
+        <img src="/img/social/facebook.svg" alt="" />
+      </button>
+
+      <button>
+        <img src="/img/social/linked_in.svg" alt="" />
+      </button>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="flex flex-col w-1/2">
+      <div
+        class="uppercase leading-[26px] tracking-[0.9px] font-bold text-[18px] w-1/2"
+      >
+        Menu
+        <hr class="border-t-2 border-t-[var(--white)] my-[31px]" />
+      </div>
+      <div class="flex flex-wrap uppercase w-1/2">
+        <a class="w-1/2" href="" *ngFor="let item of links">
+          {{ item.label }}
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-1/2">
+      <div
+        class="flex flex-col bg-[var(--gray)] pl-[34px] py-[44px] gap-12 rounded-[40px]"
+      >
+        <div
+          class="uppercase font-bold leading-[26px] tracking-[0.9px] text-[18px]"
+        >
+          Download our Application
+        </div>
+        <div
+          class="text-[18px] leading-[32px] tracking-[0px] max-w-[420px] text-wrap"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed
+          nulla integer
+        </div>
+        <div class="flex gap-[16px] w-full">
+          <button
+            class="min-w-[193px] cursor-pointer hover:bg-[var(--blue3)] bg-[var(--blue)] rounded-[40px] px-[27px] py-[32px]"
+          >
+            <div class="flex gap-[8px] max-h-[30px]">
+              <img src="/img/social/apple.svg" alt="" />
+              <span class="w-full">IOS PWA</span>
+            </div>
+          </button>
+          <button
+            class="min-w-[193px] cursor-pointer hover:bg-[var(--blue3)] bg-[var(--blue)] rounded-[40px] px-[27px] py-[32px]"
+          >
+            <div class="flex gap-[8px] max-h-[30px]">
+              <img src="/img/social/android.svg" alt="" />
+              <span class="w-full">ANDROID PWA</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="border-t-2 border-t-[var(--gray)]" />
+  <p class="text-center">&copy; 2022 Finances&Signals. All rights reserved.</p>
+</footer>

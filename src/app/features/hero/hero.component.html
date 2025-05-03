@@ -1,0 +1,28 @@
+<div class="flex relative justify-center items-start">
+  <app-spinner *ngIf="loading"></app-spinner>
+  <div
+    *ngIf="!loading"
+    class="flex flex-col gap-[9px] items-start justify-start w-1/2 h-full relative"
+  >
+    <h1
+      class="text-[66px] leading-[80px] tracking-[-1px] font-bold text-[var(--white)]"
+    >
+      {{ header }}
+    </h1>
+    <h2
+      class="text-[18px] leading-[32px] tracking-[0px] font-normal text-[var(--gray3)]"
+    >
+      {{ subheader }}
+    </h2>
+    <div class="flex gap-[28px] mt-[42px] justify-start w-full">
+      <app-primary-button>Download PWA</app-primary-button>
+      <app-secondary-button>Our Pricing</app-secondary-button>
+    </div>
+  </div>
+  <div
+    *ngIf="!loading"
+    class="flex flex-col gap-[9px] items-start justify-start w-1/2"
+  >
+    <img class="w-full h-full" alt="Hero" [src]="image" />
+  </div>
+</div>

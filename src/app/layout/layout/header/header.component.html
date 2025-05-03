@@ -1,0 +1,28 @@
+<header
+  class="container w-full mx-auto px-4 sm:px-6 lg:px-8 flex bg-[var(--blue2)] py-[33px] gap-[40px] justify-between"
+>
+  <div class="flex gap-[10px] p-[24px] border-r-2 border-r-[var(--blue3)]">
+    <img class="max-w-[154px] max-h-[30px]" src="/img/logo.svg" alt="" />
+    <span class="text-[var(--white)] text-[18px] font-normal">
+      Finances&Signals
+    </span>
+  </div>
+  <div class="flex gap-[27px] px-[1px] py-[7px] items-center">
+    <a
+      *ngFor="let link of links"
+      [routerLink]="[link.href]"
+      [ngClass]="{
+        'border-b-2 border-b-[var(--white)]': isLinkActive(link.href)
+      }"
+      class="text-[var(--white)] text-[18px] font-normal uppercase leading-[16px] tracking-[1.4px]"
+      >{{ link.label }}</a
+    >
+  </div>
+  <div class="flex w-1/4 justify-end">
+    <button
+      class="bg-[var(--blue)] text-[var(--white)] text-[16px] font-normal uppercase leading-[16px] tracking-[1.6px] px-[32px] py-[20px] rounded-[40px] hover:bg-[var(--blue3)] cursor-pointer"
+    >
+      Sign up
+    </button>
+  </div>
+</header>
