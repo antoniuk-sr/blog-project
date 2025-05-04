@@ -12,6 +12,26 @@
   --black: #000000;
 }
 
+.swiper-pagination {
+  bottom: -50px !important;
+}
+/* Буллеты (точки) */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: var(--gray) !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Активный буллет */
+.swiper-pagination-bullet-active {
+  background-color: var(--white) !important;
+  transform: scale(1.2) !important;
+}
+
 body {
   font-family: "DM Sans", sans-serif !important;
   font-weight: normal;

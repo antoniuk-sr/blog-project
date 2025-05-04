@@ -5,7 +5,7 @@ export interface Feedback {
   cards: FeedbackCard[];
 }
 
-interface FeedbackCard {
+export interface FeedbackCard {
   text: string;
   user: FeedbackUser;
 }

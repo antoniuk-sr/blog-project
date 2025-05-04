@@ -8,10 +8,17 @@ import { TechnologiesComponent } from '@/app/features/technologies/technologies.
 import { Technology } from '@/app/types/technology';
 import { PortfolioComponent } from '@/app/features/portfolio/portfolio.component';
 import { Portfolio } from '@/app/types/portfolio';
+import { FeedbackComponent } from '@/app/features/feedback/feedback.component';
+import { Feedback } from '@/app/types/feedback';
 
 @Component({
   selector: 'app-index',
-  imports: [HeroComponent, TechnologiesComponent, PortfolioComponent],
+  imports: [
+    HeroComponent,
+    TechnologiesComponent,
+    PortfolioComponent,
+    FeedbackComponent,
+  ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css',
 })
@@ -25,6 +32,8 @@ export class IndexComponent implements OnInit {
   subheader: string = '';
   technologies: Technology[] = [];
   portfolio: Portfolio[] = [];
+  feedback!: Feedback;
+
   image: Image = {
     documentId: '',
     formats: {
@@ -57,6 +66,7 @@ export class IndexComponent implements OnInit {
             (this.image = data.Hero?.hero_image);
           this.technologies = data.technologies;
           this.portfolio = data.portfolio;
+          this.feedback = data.feedback;
         },
         error: (error) => {
           console.log(error);

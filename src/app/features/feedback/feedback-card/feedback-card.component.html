@@ -1,0 +1,31 @@
+<div
+  class="bg-[var(--gray)] flex flex-col justify-between gap-[25px] px-[65px] py-[50px] rounded-[40px] min-h-[340px] max-h-[340px] max-w-[600px] min-x-[580px]"
+>
+  <span
+    class="text-[var(--white)] text-[18px] tracking-[0px] leading-[32px] font-normal w-[350px] max-h-[160px] line-clamp-5"
+  >
+    {{ card.text }}
+  </span>
+  <div class="flex gap-[22px]">
+    <div class="flex gap-[22px]">
+      <div>
+        <img
+          [src]="card?.user?.avatar?.formats?.small?.url"
+          class="rounded-full h-[60px] w-[60px]"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col gap-[6px] justify-around">
+      <div
+        class="text-[var(--white)] uppercase font-bold leading-[18px] tracking-[0.8px]"
+      >
+        {{ card?.user?.name }}
+      </div>
+      <div
+        class="text-[var(--white)] uppercase font-normal leading-[18px] tracking-[0.8px]"
+      >
+        {{ card?.user?.role }}
+      </div>
+    </div>
+  </div>
+</div>
