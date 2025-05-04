@@ -1,1 +1,10 @@
-<p>about works!</p>
+<div class="flex flex-col gap-[170px]">
+  <app-about-hero [hero]="about?.hero!"></app-about-hero>
+  <app-about-drives [drives]="about?.drives!"></app-about-drives>
+  <app-about-our-description
+    [ourDescription]="about?.our_description!"
+  ></app-about-our-description>
+  <app-about-timeline [timeline]="about?.timeline!"></app-about-timeline>
+  <app-about-team [team]="about?.team!"></app-about-team>
+  <div></div>
+</div>

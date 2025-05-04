@@ -19,7 +19,7 @@ export class ApiService {
     params,
   }: {
     method: 'get';
-    url: 'Home' | 'articles';
+    url: 'Home' | 'articles' | 'about';
     params: object;
   }): Observable<any> {
     const urlWithParams = `${this.baseUrl}/${url}?${stringify(params)}`;
@@ -37,6 +37,13 @@ export class ApiService {
     };
   }
   protected convertImage(image: Image): Image {
+    if (!image) return image;
+    if (image?.ext === '.svg') {
+      return {
+        ...image,
+        url: `${this.uploadsUrl}${image.url}`,
+      };
+    }
     return {
       ...image,
       formats: {

@@ -1,0 +1,19 @@
+<div class="flex flex-row relative">
+  <div class="flex flex-col w-1/2 gap-[78px]">
+    <div class="flex flex-col gap-[16px]">
+      <app-desktop-h2>{{ ourDescription?.first_header }}</app-desktop-h2>
+      <app-text-body *ngFor="let line of firstDescriptionParts">{{
+        line
+      }}</app-text-body>
+    </div>
+    <div class="flex flex-col gap-[16px]">
+      <app-desktop-h2>{{ ourDescription?.second_header }}</app-desktop-h2>
+      <app-text-body *ngFor="let line of secondDescriptionParts">{{
+        line
+      }}</app-text-body>
+    </div>
+  </div>
+  <div class="flex flex-col w-1/2">
+    <img width="650" height="650" class="absolute" src="/img/planet.svg" />
+  </div>
+</div>

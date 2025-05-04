@@ -48,6 +48,8 @@ export class IndexComponent implements OnInit {
 
   image: Image = {
     documentId: '',
+    url: '',
+    ext: '',
     formats: {
       thumbnail: {
         url: '',

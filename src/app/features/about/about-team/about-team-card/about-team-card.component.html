@@ -1,0 +1,19 @@
+<div
+  class="flex flex-col w-full gap-[32px] max-h-[550px] bg-[var(--blue3)] p-[24px] rounded-[40px]"
+>
+  <img
+    class="max-w-[327px] min-w-[327px] min-h-[400px] max-h-[400px] rounded-[40px]"
+    [src]="
+      card?.author?.avatar?.formats?.medium?.url ||
+      card?.author?.avatar?.formats?.small?.url
+    "
+  />
+  <div class="flex flex-col gap-[12px]">
+    <div class="uppercase leading-[18px] tracking-[0.8px] font-bold">
+      {{ card?.author?.name }}
+    </div>
+    <div class="leading-[18px] tracking-[0.8px] uppercase line-clamp-1">
+      {{ card?.author?.role }}
+    </div>
+  </div>
+</div>

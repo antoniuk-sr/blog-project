@@ -12,4 +12,6 @@ import { layoutLinks } from '../data/layout-links';
 })
 export class FooterComponent {
   links: Link[] = layoutLinks;
+
+  currentYear = new Date().getFullYear();
 }

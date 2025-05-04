@@ -1,0 +1,23 @@
+<div
+  class="flex justify-between gap-[54px] border-b-[1px] border-b-[var(--white)]"
+>
+  <div class="flex items-start justify-center w-[10%]">
+    <img class="w-[24px] h-[24px]" src="/img/icons/point.svg" />
+  </div>
+  <div class="flex flex-col gap-[16px]">
+    <div
+      class="flex justify-start items-center font-bold text-[28px] leading-[30px] tracking-[0.28px]"
+    >
+      {{ point?.date }}
+    </div>
+    <div class="flex flex-col justify-center items-start gap-[12px] mb-[40px]">
+      <span
+        class="uppercase text-[18px] font-bold leading-[32px] tracking-[0px]"
+        >{{ point?.header }}</span
+      >
+      <span class="text-[18px] leading-[32px] tracking-[0px] line-clamp-3">{{
+        point?.subheader
+      }}</span>
+    </div>
+  </div>
+</div>

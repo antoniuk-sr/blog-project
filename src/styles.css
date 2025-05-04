@@ -43,6 +43,7 @@ body {
   min-width: 320px;
   height: 100vh;
   background-color: var(--blue2);
+  color: var(--white);
 }
 
 /* DM Sans - Regular */

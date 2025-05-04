@@ -1,0 +1,20 @@
+<div
+  class="w-full h-full flex gap-[24px] px-[32px] py-[58px] bg-[var(--blue3)] rounded-[40px]"
+>
+  <div class="flex flex-col justify-start items-center">
+    <img [src]="card?.image?.url" class="w-[70px] h-[70px]" />
+  </div>
+
+  <div class="w-full h-full flex flex-col gap-[7px] justify-center items-start">
+    <div
+      class="text-[var(--white)] text-[22px] font-bold leading-[31px] tracking-[0px] uppercase"
+    >
+      {{ card?.header }}
+    </div>
+    <div
+      class="text-[var(--white)] text-[18px] font-normal leading-[32px] tracking-[0px]"
+    >
+      {{ card?.subheader }}
+    </div>
+  </div>
+</div>

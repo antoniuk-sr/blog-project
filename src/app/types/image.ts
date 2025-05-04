@@ -1,4 +1,6 @@
 export interface Image {
+  ext: string;
+  url: string;
   documentId: string;
   formats: {
     thumbnail: {

@@ -1,0 +1,14 @@
+<div class="flex flex-col w-full gap-[49px]">
+  <div class="flex justify-between items-center">
+    <app-desktop-h2>{{ team?.header }}</app-desktop-h2>
+    <div class="max-w-[500px] line-clamp-2">
+      <app-text-body>{{ team?.subheader }}</app-text-body>
+    </div>
+  </div>
+  <div class="flex justify-center gap-[38px]">
+    <app-about-team-card
+      *ngFor="let card of team?.team_card"
+      [card]="card"
+    ></app-about-team-card>
+  </div>
+</div>
