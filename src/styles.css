@@ -10,6 +10,8 @@
   --gray2: rgba(255, 255, 255, 0.2);
   --gray3: rgba(255, 255, 255, 0.3);
   --black: #000000;
+  --red: #ff0000;
+  --green: #00ff00;
 }
 
 .swiper-pagination {

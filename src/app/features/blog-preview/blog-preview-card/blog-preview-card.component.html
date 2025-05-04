@@ -11,7 +11,9 @@
     class="flex flex-col p-[43px] gap-[40px] bg-[var(--blue3)] rounded-b-[40px]"
   >
     <div
-      class="bg-[var(--blue)] w-[110px] rounded-[40px] p-[14px] mt-[-70px] uppercase flex items-center justify-center text-[var(--white)] font-medium leading-[18px] tracking-[0.7px]"
+      class="{{
+        getColor(article)
+      }} w-[110px] rounded-[40px] p-[14px] mt-[-70px] uppercase flex items-center justify-center text-[var(--white)] font-medium leading-[18px] tracking-[0.7px]"
     >
       {{ article?.tag?.tag }}
     </div>

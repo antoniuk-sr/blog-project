@@ -8,10 +8,20 @@ import { Component, Input, OnChanges } from '@angular/core';
   templateUrl: './blog-preview-card.component.html',
   styleUrl: './blog-preview-card.component.css',
 })
-export class BlogPreviewCardComponent implements OnChanges {
+export class BlogPreviewCardComponent {
   @Input() article!: Article;
 
-  ngOnChanges(): void {
-    console.log(this.article);
+  getColor(article: Article): string {
+    switch (article.tag.color.color) {
+      case 'blue':
+        return 'bg-[var(--blue)]';
+      case 'red':
+        return 'bg-[var(--red)]';
+      case 'green':
+        return 'bg-[var(--green)]';
+      case 'black':
+        return 'bg-[var(--black)]';
+    }
+    return 'bg-[var(--blue)]';
   }
 }
