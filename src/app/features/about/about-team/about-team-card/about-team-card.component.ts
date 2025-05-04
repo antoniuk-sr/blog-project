@@ -10,7 +10,5 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 export class AboutTeamCardComponent implements OnChanges {
   @Input() card!: OurTeamCard;
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['card']?.currentValue);
-  }
+  ngOnChanges(changes: SimpleChanges): void {}
 }

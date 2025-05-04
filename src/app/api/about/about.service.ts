@@ -36,7 +36,6 @@ export class AboutService extends ApiService {
           team: {
             ...res.team,
             team_card: res.team.team_card.map((card: any) => {
-              console.log({ card });
               return {
                 ...card,
                 author: {
