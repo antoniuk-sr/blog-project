@@ -19,7 +19,7 @@ export class ApiService {
     params,
   }: {
     method: 'get';
-    url: 'Home';
+    url: 'Home' | 'articles';
     params: object;
   }): Observable<any> {
     const urlWithParams = `${this.baseUrl}/${url}?${stringify(params)}`;

@@ -1,0 +1,31 @@
+<div
+  class="rounded-[40px] min-w-[380px] max-w-[380px] flex flex-col gap-[40px]"
+>
+  <div>
+    <img
+      class="rounded-t-[40px] max-h-[215px] min-h-[215px] min-w-[380px] max-w-[380px]]"
+      [src]="article?.image?.formats?.small?.url"
+    />
+  </div>
+  <div
+    class="flex flex-col p-[43px] gap-[40px] bg-[var(--blue3)] rounded-b-[40px]"
+  >
+    <div
+      class="bg-[var(--blue)] w-[110px] rounded-[40px] p-[14px] mt-[-70px] uppercase flex items-center justify-center text-[var(--white)] font-medium leading-[18px] tracking-[0.7px]"
+    >
+      {{ article?.tag?.tag }}
+    </div>
+    <div
+      class="text-[var(--white)] text-[22px] font-bold leading-[31px] tracking-[0px] hover:text-[var(--blue)] cursor-pointer"
+    >
+      {{ article.header }}
+    </div>
+    <div
+      class="text-[var(--white)] text-[18px] font-normal leading-[32px] tracking-[0px]"
+    >
+      {{ article.subheader }}
+    </div>
+    <hr class="border-[var(--gray2)]" />
+    <app-user-info [user]="article?.author!"></app-user-info>
+  </div>
+</div>

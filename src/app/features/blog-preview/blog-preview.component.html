@@ -1,0 +1,19 @@
+<div class="flex flex-col w-full gap-[50px]">
+  <div class="flex items-center justify-between text-[var(--white)]">
+    <span class="text-[42px] font-bold leading-[55px] tracking-[0px]">{{
+      blogPreviewTitles?.header
+    }}</span>
+    <span class="text-[18px] font-normal leading-[32px] tracking-[0px]]">{{
+      blogPreviewTitles?.subheader
+    }}</span>
+  </div>
+  <div class="flex justify-around gap-[26px]">
+    <app-blog-preview-card
+      *ngFor="let article of blogPreview"
+      [article]="article"
+    ></app-blog-preview-card>
+  </div>
+  <div class="flex justify-around">
+    <app-secondary-button> Смотреть все </app-secondary-button>
+  </div>
+</div>

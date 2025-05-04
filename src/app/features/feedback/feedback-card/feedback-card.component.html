@@ -6,26 +6,5 @@
   >
     {{ card.text }}
   </span>
-  <div class="flex gap-[22px]">
-    <div class="flex gap-[22px]">
-      <div>
-        <img
-          [src]="card?.user?.avatar?.formats?.small?.url"
-          class="rounded-full min-h-[60px] max-h-[60px] min-w-[60px] max-w-[60px]"
-        />
-      </div>
-    </div>
-    <div class="flex flex-col gap-[6px] justify-around">
-      <div
-        class="text-[var(--white)] uppercase font-bold leading-[18px] tracking-[0.8px]"
-      >
-        {{ card?.user?.name }}
-      </div>
-      <div
-        class="text-[var(--white)] uppercase font-normal leading-[18px] tracking-[0.8px]"
-      >
-        {{ card?.user?.role }}
-      </div>
-    </div>
-  </div>
+  <app-user-info [user]="card.user"></app-user-info>
 </div>

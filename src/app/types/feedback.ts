@@ -1,4 +1,5 @@
 import { Image } from './image';
+import { User } from './user';
 
 export interface Feedback {
   title: string;
@@ -10,8 +11,4 @@ export interface FeedbackCard {
   user: FeedbackUser;
 }
 
-interface FeedbackUser {
-  name: string;
-  role: string;
-  avatar: Image;
-}
+type FeedbackUser = User;

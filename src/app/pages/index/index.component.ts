@@ -13,6 +13,10 @@ import { Feedback } from '@/app/types/feedback';
 import { ContactUs } from '@/app/types/contactUs';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { HomeContactUsComponent } from '@/app/features/home-contact-us/home-contact-us.component';
+import { Article } from '@/app/types/article';
+import { BlogService } from '@/app/api/blog/blog.service';
+import { BlogPreview } from '@/app/types/blog-preview';
+import { BlogPreviewComponent } from '@/app/features/blog-preview/blog-preview.component';
 
 @Component({
   selector: 'app-index',
@@ -22,6 +26,7 @@ import { HomeContactUsComponent } from '@/app/features/home-contact-us/home-cont
     PortfolioComponent,
     FeedbackComponent,
     HomeContactUsComponent,
+    BlogPreviewComponent,
   ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css',
@@ -38,6 +43,8 @@ export class IndexComponent implements OnInit {
   portfolio: Portfolio[] = [];
   feedback!: Feedback;
   contactUs!: ContactUs;
+  blogPreview: Article[] = [];
+  blogPreviewTitles!: BlogPreview;
 
   image: Image = {
     documentId: '',
@@ -58,6 +65,7 @@ export class IndexComponent implements OnInit {
   };
 
   homeService = inject(HomeService);
+  blogService = inject(BlogService);
   ngOnInit(): void {
     this.loading = true;
     this.homeService
@@ -73,10 +81,23 @@ export class IndexComponent implements OnInit {
           this.portfolio = data.portfolio;
           this.feedback = data.feedback;
           this.contactUs = data.contact_us;
+          this.blogPreviewTitles = data.blog_preview;
         },
         error: (error) => {
           console.log(error);
           (this.loading = false), (this.error = error.message);
+        },
+      });
+
+    this.blogService
+      .fetchHomePreview()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (data: Article[]) => {
+          this.blogPreview = data;
+        },
+        error: (error) => {
+          console.log(error);
         },
       });
   }

@@ -22,6 +22,7 @@ export class HomeService extends ApiService {
           'portfolio.image',
           'feedback.cards.user.avatar',
           'contact_us.video',
+          'blog_preview',
         ],
       },
     }).pipe(
