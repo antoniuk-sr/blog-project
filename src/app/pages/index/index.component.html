@@ -1,9 +1,13 @@
-<app-hero
-  [header]="header"
-  [image]="image.formats.large.url"
-  [subheader]="subheader"
-  [loading]="loading"
-></app-hero>
-<app-technologies [technologies]="technologies"></app-technologies>
-<app-portfolio [portfolio]="portfolio"></app-portfolio>
-<app-feedback [feedback]="feedback"></app-feedback>"
+<div class="flex flex-col gap-[170px]">
+  <app-hero
+    [header]="header"
+    [image]="image.formats.large.url"
+    [subheader]="subheader"
+    [loading]="loading"
+  ></app-hero>
+  <app-technologies [technologies]="technologies"></app-technologies>
+  <app-portfolio [portfolio]="portfolio"></app-portfolio>
+  <app-feedback [feedback]="feedback"></app-feedback>
+  <app-home-contact-us [contactUs]="contactUs"></app-home-contact-us>
+  <div></div>
+</div>

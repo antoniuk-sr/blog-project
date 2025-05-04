@@ -21,6 +21,7 @@ export class HomeService extends ApiService {
           'technologies.image',
           'portfolio.image',
           'feedback.cards.user.avatar',
+          'contact_us.video',
         ],
       },
     }).pipe(
@@ -55,6 +56,10 @@ export class HomeService extends ApiService {
                 },
               };
             }),
+          },
+          contact_us: {
+            ...data.contact_us,
+            video: this.convertVideo(data.contact_us.video),
           },
         };
       })

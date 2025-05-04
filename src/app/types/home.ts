@@ -1,3 +1,4 @@
+import { ContactUs } from './contactUs';
 import { Feedback } from './feedback';
 import { Hero } from './hero';
 import { Portfolio } from './portfolio';
@@ -8,4 +9,5 @@ export interface Home {
   technologies: Technology[];
   portfolio: Portfolio[];
   feedback: Feedback;
+  contact_us: ContactUs;
 }

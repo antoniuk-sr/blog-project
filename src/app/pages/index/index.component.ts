@@ -10,6 +10,9 @@ import { PortfolioComponent } from '@/app/features/portfolio/portfolio.component
 import { Portfolio } from '@/app/types/portfolio';
 import { FeedbackComponent } from '@/app/features/feedback/feedback.component';
 import { Feedback } from '@/app/types/feedback';
+import { ContactUs } from '@/app/types/contactUs';
+import { ContactUsComponent } from '../contact-us/contact-us.component';
+import { HomeContactUsComponent } from '@/app/features/home-contact-us/home-contact-us.component';
 
 @Component({
   selector: 'app-index',
@@ -18,6 +21,7 @@ import { Feedback } from '@/app/types/feedback';
     TechnologiesComponent,
     PortfolioComponent,
     FeedbackComponent,
+    HomeContactUsComponent,
   ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css',
@@ -33,6 +37,7 @@ export class IndexComponent implements OnInit {
   technologies: Technology[] = [];
   portfolio: Portfolio[] = [];
   feedback!: Feedback;
+  contactUs!: ContactUs;
 
   image: Image = {
     documentId: '',
@@ -67,6 +72,7 @@ export class IndexComponent implements OnInit {
           this.technologies = data.technologies;
           this.portfolio = data.portfolio;
           this.feedback = data.feedback;
+          this.contactUs = data.contact_us;
         },
         error: (error) => {
           console.log(error);

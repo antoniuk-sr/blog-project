@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { stringify } from 'qs';
 import { map, Observable } from 'rxjs';
 import { Image } from '@/app/types/image';
+import { Video } from '../types/video';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +30,12 @@ export class ApiService {
     );
   }
 
+  protected convertVideo(video: Video): Video {
+    return {
+      ...video,
+      url: `${this.uploadsUrl}${video.url}`,
+    };
+  }
   protected convertImage(image: Image): Image {
     return {
       ...image,
