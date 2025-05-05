@@ -21,7 +21,8 @@ export class AboutService extends ApiService {
         ],
       },
     }).pipe(
-      map((res: About): About => {
+      map((data: any): About => {
+        const res = data.data;
         return {
           ...res,
           drives: {

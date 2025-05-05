@@ -1,0 +1,10 @@
+<div class="flex uppercase w-fit items-center justify-center">
+  <div
+    (click)="onClick()"
+    class="w-full {{
+      isActive ? 'bg-[var(--blue)]' : 'bg-[var(--gray)]'
+    }} rounded-[40px] cursor-pointer px-[24px] py-[11px]"
+  >
+    <app-text-body2>{{ category?.name || "" }}</app-text-body2>
+  </div>
+</div>

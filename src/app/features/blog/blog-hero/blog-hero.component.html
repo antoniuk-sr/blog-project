@@ -1,0 +1,36 @@
+<div class="flex flex-col gap-[48px] justify-between w-full">
+  <div class="flex justify-between items-center">
+    <app-desktop-h1>{{ hero?.header }}</app-desktop-h1>
+    <div class="max-w-[500px]">
+      <app-text-body>{{ hero?.subheader }}</app-text-body>
+    </div>
+  </div>
+  <div class="flex justify-between items-center w-full min-h-[334px]">
+    <div
+      class="flex flex-col gap-[21px] w-1/2 bg-[var(--blue3)] rounded-l-[40px] px-[47px] py-[57px] min-h-[334px]"
+    >
+      <span
+        class="{{
+          getBgColor(hero?.main_article?.tag?.color?.color!)
+        }} w-fit text-[var(--white)] uppercase font-medium leading-[18px] text-[14px] tracking-[0.7px] rounded-[40px] py-[9px] px-[15px]"
+        >{{ hero?.main_article?.tag?.tag! }}</span
+      >
+      <div class="flex flex-col gap-[16px]">
+        <span
+          class="text-[var(--white)] font-bold leading-[40px] text-[28px] tracking-[0.28px]"
+          >{{ hero?.main_article?.header }}</span
+        >
+        <app-text-body>{{ hero?.main_article?.subheader }}</app-text-body>
+      </div>
+    </div>
+    <div class="flex h-full w-1/2 max-h-[334px] rounded-[40px]">
+      <img
+        class="w-full max-h-[334px] rounded-r-[40px] object-cover"
+        [src]="
+          hero?.main_article?.image?.formats?.large?.url ||
+          hero?.main_article?.image?.formats?.medium?.url
+        "
+      />
+    </div>
+  </div>
+</div>

@@ -21,8 +21,8 @@ export const layoutLinks = [
   },
   {
     id: 'blogs',
-    label: 'Blogs',
-    href: '/blogs',
+    label: 'Blog',
+    href: '/blog',
   },
   {
     id: 'contact',

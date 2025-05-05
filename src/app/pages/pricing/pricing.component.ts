@@ -25,7 +25,6 @@ export class PricingComponent implements OnInit {
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (pricing) => {
-          console.log({ pricing });
           this.pricing = pricing;
         },
         error: (err) => {

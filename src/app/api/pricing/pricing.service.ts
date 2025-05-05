@@ -13,8 +13,9 @@ export class PricingService extends ApiService {
         populate: ['cards.points'],
       },
     }).pipe(
-      map((res: Pricing): Pricing => {
-        return res;
+      map((res: any): Pricing => {
+        const data = res.data;
+        return data;
       })
     );
   }

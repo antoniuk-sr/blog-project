@@ -26,8 +26,8 @@ export class HomeService extends ApiService {
         ],
       },
     }).pipe(
-      map((data: Home): Home => {
-        // update images urls
+      map((res: any): Home => {
+        const data = res.data;
         return {
           ...data,
           Hero: {

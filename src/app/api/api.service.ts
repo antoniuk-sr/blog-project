@@ -17,15 +17,39 @@ export class ApiService {
     method,
     url,
     params,
+    pathParams,
+    data,
   }: {
-    method: 'get';
-    url: 'Home' | 'articles' | 'about' | 'pricing';
+    method: 'get' | 'post' | 'put';
+    url:
+      | 'Home'
+      | 'articles'
+      | 'about'
+      | 'pricing'
+      | 'blog'
+      | 'subscribers'
+      | 'article-cagegories';
     params: object;
+    data?: object;
+    pathParams?: { id: string };
   }): Observable<any> {
     const urlWithParams = `${this.baseUrl}/${url}?${stringify(params)}`;
-    return this.http[method](urlWithParams).pipe(
+    let res;
+    switch (method) {
+      case 'get':
+        res = this.http.get(urlWithParams);
+        break;
+
+      case 'put':
+        res = this.http.put(`${this.baseUrl}/${url}/${pathParams?.id}`, data);
+        break;
+      case 'post':
+        res = this.http.post(urlWithParams, data);
+        break;
+    }
+    return res.pipe(
       map((res: any) => {
-        return res.data;
+        return res;
       })
     );
   }

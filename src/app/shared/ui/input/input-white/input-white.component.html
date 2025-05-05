@@ -1,0 +1,21 @@
+<div
+  class="flex bg-[var(--white)] rounded-[40px] pr-[8px] pl-[16px] py-[16px] w-full min-w-[100%] gap-[16px] text-[var(--black)]"
+>
+  <input
+    #inputField
+    [type]="type"
+    [placeholder]="placeholder"
+    [required]="required"
+    class="w-full text-[--var(--black)] p-[8px] pr-[16px] focus:outline-1 focus:outline-[var(--blue)] rounded-[40px]"
+    [disabled]="disabled"
+    (keyup)="onKeyUp($event)"
+    [value]="value"
+  />
+  <button
+    class="rounded-[40px] bg-[var(--blue)] hover:bg-[var(--blue3)] cursor-pointer py-[24px] px-[26px] uppercase text-[var(--white)] font-bold leading-[16px] tracking-[1.6px] text-[14px] disabled:opacity-25 disabled:hover:bg-[var(--blue)] disabled:cursor-not-allowed"
+    [disabled]="disabled"
+    (click)="onButtonClick()"
+  >
+    {{ loading ? "Loading..." : buttonText }}
+  </button>
+</div>

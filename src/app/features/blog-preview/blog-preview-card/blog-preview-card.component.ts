@@ -1,4 +1,5 @@
 import { UserInfoComponent } from '@/app/shared/ui/user-info/user-info.component';
+import { getBgColorClass } from '@/app/tools/getColor';
 import { Article } from '@/app/types/article';
 import { Component, Input, OnChanges } from '@angular/core';
 
@@ -12,16 +13,6 @@ export class BlogPreviewCardComponent {
   @Input() article!: Article;
 
   getColor(article: Article): string {
-    switch (article.tag.color.color) {
-      case 'blue':
-        return 'bg-[var(--blue)]';
-      case 'red':
-        return 'bg-[var(--red)]';
-      case 'green':
-        return 'bg-[var(--green)]';
-      case 'black':
-        return 'bg-[var(--black)]';
-    }
-    return 'bg-[var(--blue)]';
+    return getBgColorClass(article?.tag?.color?.color);
   }
 }
