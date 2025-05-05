@@ -1,7 +1,7 @@
 import { Link } from '@/app/types/link';
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { layoutLinks } from '../data/layout-links';
 
 @Component({
@@ -14,4 +14,9 @@ export class FooterComponent {
   links: Link[] = layoutLinks;
 
   currentYear = new Date().getFullYear();
+  constructor(private router: Router) {}
+  isLinkActive(href: string): boolean {
+    const path = this.router.url;
+    return path === href || (href !== '/' && path.startsWith(href));
+  }
 }

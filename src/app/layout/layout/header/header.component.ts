@@ -1,8 +1,8 @@
 import { Link } from '@/app/types/link';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { layoutLinks } from '../data/layout-links';
 import { NgClass, NgFor } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +13,13 @@ import { Router, RouterModule } from '@angular/router';
 export class HeaderComponent {
   links: Link[] = layoutLinks;
 
+  route: ActivatedRoute = inject(ActivatedRoute);
+
   constructor(private router: Router) {}
 
   isLinkActive(href: string): boolean {
-    return true;
+    const path = this.router.url;
+    console.log({ path, href });
+    return path === href || (href !== '/' && path.startsWith(href));
   }
 }

@@ -31,8 +31,13 @@
         Menu
         <hr class="border-t-2 border-t-[var(--white)] my-[31px]" />
       </div>
-      <div class="flex flex-wrap uppercase w-1/2">
-        <a class="w-1/2" href="" *ngFor="let item of links">
+      <div class="flex flex-wrap w-1/2">
+        <a
+          [routerLink]="item.href"
+          class="w-1/2 {{ isLinkActive(item.href) && 'underline' }}"
+          href=""
+          *ngFor="let item of links"
+        >
           {{ item.label }}
         </a>
       </div>
