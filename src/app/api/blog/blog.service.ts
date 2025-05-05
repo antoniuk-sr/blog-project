@@ -6,6 +6,30 @@ import { Blog } from '@/app/types/blog';
 
 @Injectable({ providedIn: 'root' })
 export class BlogService extends ApiService {
+  fetchArticleById({ documentId }: { documentId: string }) {
+    return this.request({
+      method: 'get',
+      url: 'articles',
+      params: {
+        populate: [
+          'tag.color',
+          'image',
+          'author.avatar',
+          'tag.article_cagegory',
+        ],
+      },
+      pathParams: { id: documentId },
+    }).pipe(
+      map((res) => ({
+        ...res.data,
+        image: this.convertImage(res.data.image),
+        author: {
+          ...res.data.author,
+          avatar: this.convertImage(res.data.author.avatar),
+        },
+      }))
+    );
+  }
   fetchArticlesByCategory({
     documentId,
     page,

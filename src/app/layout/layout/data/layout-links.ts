@@ -14,19 +14,10 @@ export const layoutLinks = [
     label: 'Pricing',
     href: '/pricing',
   },
-  {
-    id: 'tokens',
-    label: 'Tokens',
-    href: '/tokens',
-  },
+
   {
     id: 'blogs',
     label: 'Blog',
     href: '/blog',
-  },
-  {
-    id: 'contact',
-    label: 'Contact us',
-    href: '/contact_us',
   },
 ];

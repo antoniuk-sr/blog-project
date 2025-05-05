@@ -13,6 +13,8 @@ export interface ArticleCategory {
 }
 
 export interface Article {
+  createdAt: string;
+  documentId: string;
   author: User;
   header: string;
   image: Image;

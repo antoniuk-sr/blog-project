@@ -37,7 +37,13 @@ export class ApiService {
     let res;
     switch (method) {
       case 'get':
-        res = this.http.get(urlWithParams);
+        res = this.http.get(
+          pathParams?.id
+            ? `${this.baseUrl}/${url}/${pathParams?.id}?${stringify(
+                params
+              )}`.trim()
+            : urlWithParams
+        );
         break;
 
       case 'put':

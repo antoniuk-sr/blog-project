@@ -20,7 +20,9 @@
     <div
       class="text-[var(--white)] text-[22px] font-bold leading-[31px] tracking-[0px] hover:text-[var(--blue)] cursor-pointer"
     >
-      {{ article.header }}
+      <a [routerLink]="['/article', article.documentId]">
+        {{ article.header }}
+      </a>
     </div>
     <div
       class="text-[var(--white)] text-[18px] font-normal leading-[32px] tracking-[0px]"

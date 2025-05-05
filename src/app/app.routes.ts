@@ -5,6 +5,7 @@ import { PricingComponent } from './pages/pricing/pricing.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { TokensComponent } from './pages/tokens/tokens.component';
+import { ArticleComponent } from './pages/article/article.component';
 
 export const routes: Routes = [
   {
@@ -28,14 +29,9 @@ export const routes: Routes = [
     title: 'Blog Page',
   },
   {
-    path: 'contact_us',
-    component: ContactUsComponent,
-    title: 'Contact Us Page',
-  },
-  {
-    path: 'tokens',
-    component: TokensComponent,
-    title: 'Tokens Page',
+    path: 'article/:id',
+    component: ArticleComponent,
+    title: 'Article Page',
   },
   {
     path: '**',

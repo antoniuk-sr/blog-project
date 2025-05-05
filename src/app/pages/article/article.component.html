@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-[170px]">
+  <div class="flex flex-col w-full items-start justify-center gap-[16px]">
+    <app-text-body class="font-bold">{{ getArticleDate() }}</app-text-body>
+    <app-user-info [user]="article()?.author!"></app-user-info>
+  </div>
+  <div class="flex flex-col gap-[16px] w-full">
+    <app-desktop-h1>{{ article()?.header }}</app-desktop-h1>
+    <app-desktop-h2>{{ article()?.subheader }}</app-desktop-h2>
+    <img
+      class="rounded-[40px] max-w-[500px] self-center"
+      [src]="article()?.image?.formats?.large?.url"
+      alt="Article image"
+    />
+  </div>
+  <div class="flex justify-center">
+    <app-text-body>{{ article()?.text }}</app-text-body>
+  </div>
+  <div></div>
+</div>

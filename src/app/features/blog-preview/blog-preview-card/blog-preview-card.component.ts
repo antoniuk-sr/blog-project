@@ -2,10 +2,11 @@ import { UserInfoComponent } from '@/app/shared/ui/user-info/user-info.component
 import { getBgColorClass } from '@/app/tools/getColor';
 import { Article } from '@/app/types/article';
 import { Component, Input, OnChanges } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-blog-preview-card',
-  imports: [UserInfoComponent],
+  imports: [UserInfoComponent, RouterModule],
   templateUrl: './blog-preview-card.component.html',
   styleUrl: './blog-preview-card.component.css',
 })
